@@ -6,14 +6,17 @@ import br.thalison.model.dao.implementacao.VendedorDaoJDBC;
 import br.thalison.model.entities.Departamento;
 import br.thalison.model.entities.Vendedor;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class Programa {
     public static void main(String[] args){
 
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         VendedorDao vendedorDao = FabricaDao.criarVendedorDao();
 
-        Vendedor vendedor = vendedorDao.findByID(3);
+        Vendedor vendedor = vendedorDao.findByID(4);
 
         System.out.println(vendedor);
 
@@ -35,5 +38,9 @@ public class Programa {
             System.out.println(v);
         }
 
+        System.out.println("===========Inserir===========");
+        Vendedor novoVendedor = new Vendedor(null, "Greg", "greg@gmail.com", new Date(), 4000.0, departamento);
+        vendedorDao.iserir(vendedor);
+        System.out.printf("NOVO ID: " + novoVendedor.getId());
     }
 }

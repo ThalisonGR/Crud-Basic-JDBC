@@ -1,7 +1,7 @@
 package br.thalison.model.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Objects;
 
 public class Vendedor implements Serializable {
@@ -17,7 +17,7 @@ public class Vendedor implements Serializable {
     public Vendedor() {
     }
 
-    public Vendedor(Integer id, String nome, String email, Date dataAnviersario, Double salarioBase, Departamento departamento) {
+    public Vendedor(Integer id, String nome, String email, java.util.Date dataAnviersario, Double salarioBase, Departamento departamento) {
         this.id = id;
         this.nome = nome;
         this.email = email;

@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface VendedorDao {
 
-    void iserir(VendedorDao vendedor);
-    void update(VendedorDao vendedor);
+    void iserir(Vendedor vendedor);
+    void update(Vendedor vendedor);
     void deleteById(Integer id);
     Vendedor findByID(Integer id);
     List<Vendedor> findAll();
